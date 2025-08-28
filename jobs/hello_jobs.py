@@ -1,6 +1,6 @@
 from nautobot.apps.jobs import Job
 
-class HelloJobs(Job):
+class HelloJobsGit(Job):
 
     class Meta: 
         name = "Hello Jobs from Git Repo"
