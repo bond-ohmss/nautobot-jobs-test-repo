@@ -7,5 +7,3 @@ class HelloJobDay18(Job):
     def run(self):
         self.logger.debug("This is from the Git repo.")
         self.logger.info("Hello from Day 18")
-
-
