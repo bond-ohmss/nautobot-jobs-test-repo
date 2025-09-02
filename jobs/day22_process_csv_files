@@ -3,24 +3,6 @@ from nautobot.dcim.models import Device, Location, DeviceType
 from nautobot.extras.models import Role, Status
 
 
-class FileUpload(Job):
-    class Meta:
-        name = "CSV File Upload"
-        description = "Please select a CSV file for upload"
-
-    file = FileVar(
-        description="CSV File to upload",
-    )
-
-    def run(self, file):
-        
-        contents = str(file.read())
-        self.logger.info(f"File contents: {contents}")
-        self.logger.info(f"Job didn't crash!")
-
-        return "Great job!"
-
-
 class FileUpload_2(Job):
     class Meta:
         name = "CSV File Upload and Process"
@@ -66,6 +48,5 @@ class FileUpload_2(Job):
 
 
 register_jobs(
-    FileUpload,
     FileUpload_2,
 )
